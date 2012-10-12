@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  background-image: url('http://farm1.staticflickr.com/151/398940796_7f0beac7e2_b.jpg');
+  background-size: 100% auto, 50%;
+  font-family: 'Helvetica Neue';
+}
+
+h1 {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 100;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
