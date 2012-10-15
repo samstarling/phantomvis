@@ -1,0 +1,10 @@
+settings:
+  server_url: http://0.0.0.0:9292
+sizes:
+  -
+    width: 300
+    height: 250
+templates:
+  -
+    name: home
+    url: /
