@@ -19,9 +19,13 @@ responsive design.
 
 ### Components
 
-* *server* - Serves slides as HTML
-* *capturer* - Captures slides as images
-* *uploader* - Uploads images
+* **server** - Serves slides as HTML
+* **capturer** - Captures slides as images
+* **uploader** - Uploads images
+
+## Example Image
+
+!https://github.com/samstarling/phantomvis/blob/master/examples/home-300.png!
 
 ## Requirements
 
