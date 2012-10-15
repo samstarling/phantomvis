@@ -25,7 +25,7 @@ responsive design.
 
 ## Example Image
 
-![Example image](https://github.com/samstarling/phantomvis/blob/master/examples/home-300.png)
+![Example image](https://raw.github.com/samstarling/phantomvis/master/examples/home-300.png)
 
 ## Requirements
 
