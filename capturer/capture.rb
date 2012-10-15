@@ -1,19 +1,20 @@
 require 'yaml'
 
-class Capturer
+class SlideGenerator
   def initialize config
     @config = config
-    @sizes = config['sizes']
-    @base_url = "#{config['settings']['server_url']}"
+    @base_url = "#{@config['settings']['server_url']}"
+    @sizes = Array.new
     @templates = Array.new
     load_templates
+    load_sizes
   end
   
-  def perform_capture
+  def run
     @templates.each do |template|
       @sizes.each do |size|
-        url = "#{@base_url}#{template.url}"
-        `phantomjs capture.js #{size['width']} #{size['height']} #{url} #{template.name}-#{size['width']}.png`
+        capture = Capture.new template, size
+        capture.perform
       end
     end
   end
@@ -21,13 +22,17 @@ class Capturer
   private
 
   def load_templates
-    @config['templates'].each do |slide|
-      add_template Template.new slide['name'], slide['url']
+    @config['templates'].each do |t|
+      template = Template.new t['name'], "#{@base_url}#{t['url']}"
+      @templates << template
     end
   end
 
-  def add_template template
-    @templates << template
+  def load_sizes
+    @config['sizes'].each do |s|
+      size = Size.new s['width'], s['height']
+      @sizes << size
+    end
   end
 end
 
@@ -40,13 +45,36 @@ class Template
   end
 end
 
-class Slide
-  def initialize
+class Size
+  attr_reader :width, :height
+
+  def initialize width, height
+    @width = width
+    @height = height
+  end
+end
+
+class Capture
+  def initialize template, size
+    @template = template
+    @size = size
+  end
+
+  def perform
+    `phantomjs capture.js #{size_s} #{@template.url} #{filename}`
+  end
+  
+  def size_s
+    "#{@size.width} #{@size.height}"
+  end
+  
+  def filename
+    "#{@template.name}-#{@size.width}.png"
   end
 end
 
 config = YAML::load(File.open('config.yaml'))
-capturer = Capturer.new(config)
+generator = SlideGenerator.new(config)
 `rm *.png`
-capturer.perform_capture
+generator.run
 `open *.png`
