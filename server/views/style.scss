@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  /*background-image: url('http://farm1.staticflickr.com/151/398940796_7f0beac7e2_b.jpg');*/
+  background-size: 100% auto, 50%;
+  font-family: 'Helvetica Neue';
+  background: -webkit-linear-gradient(top, #7abcff 0%, #46729D 100%); /* Chrome10+,Safari5.1+ */
+}
+
+/* For modern browsers */
+.inner:before,
+.inner:after {
+  content:"";
+  display:table;
+}
+.inner:after {
+  clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.inner {
+  zoom:1;
+}
+
+h1, h2 {
+  color: #fff;
+  font-weight: normal;
+  margin: 0 0 0 0;
+  margin-right: 16px;
+}
+
+h1 div.inner {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 45px 10px 5px 10px;
+  margin-top: -30px;
+  -webkit-transform: skewY(-1deg);
+  clear: both;
+}
+
+h1 div.inner div {
+  float: left;
+}
+
+h1 div.inner div.on-air {
+  font-size: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.3em 0.7em;
+  margin: 0.4em 0.7em 0 0;
+  -webkit-border-radius: 3px;
+}
+
+h2 div {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  -webkit-transform: skewY(-1deg);
+  -webkit-border-bottom-right-radius: 40px;
+}
+
+.logo {
+  border-top: 1px solid #555;
+  background-position: 10px 10px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-image: url('http://s3.mediauk.com/logos/50/3.png');
+  background-color: #fff;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
