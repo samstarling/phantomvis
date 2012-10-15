@@ -63,7 +63,9 @@ class Capture
   def perform
     `phantomjs capture.js #{size_s} #{@template.url} #{filename}`
   end
-  
+
+  private
+
   def size_s
     "#{@size.width} #{@size.height}"
   end
@@ -75,6 +77,6 @@ end
 
 config = YAML::load(File.open('config.yaml'))
 generator = SlideGenerator.new(config)
-`rm *.png`
+`rm images/*.png`
 generator.run
-`open *.png`
+`open images/*.png`
