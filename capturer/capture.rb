@@ -69,7 +69,7 @@ class Capture
   end
   
   def filename
-    "#{@template.name}-#{@size.width}.png"
+    "images/#{@template.name}-#{@size.width}.png"
   end
 end
 
