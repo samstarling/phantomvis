@@ -9,7 +9,7 @@ class SlideGenerator
     load_templates
     load_sizes
   end
-  
+
   def run
     @templates.each do |template|
       @sizes.each do |size|
@@ -17,6 +17,10 @@ class SlideGenerator
         capture.perform
       end
     end
+  end
+
+  def tidy
+    `rm images/*.png`
   end
 
   private
@@ -77,6 +81,5 @@ end
 
 config = YAML::load(File.open('config.yaml'))
 generator = SlideGenerator.new(config)
-`rm images/*.png`
+generator.tidy
 generator.run
-`open images/*.png`

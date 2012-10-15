@@ -4,6 +4,9 @@ sizes:
   -
     width: 300
     height: 250
+  -
+    width: 600
+    height: 400
 templates:
   -
     name: home
