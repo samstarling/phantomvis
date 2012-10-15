@@ -1,2 +1,2 @@
-*.png
+capturer/images/*.png
 .sass-cache
