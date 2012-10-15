@@ -30,3 +30,13 @@ responsive design.
 ## Requirements
 
     $ brew install phantomjs
+
+## TODO
+
+* Component to watch for 'expired' images
+  * Then publish to a topic
+* Capturer needs to listen to this topic
+  * Then publish to uploader topic
+* Uploader then listens to this topic
+  * Uploads, and publishes to 'finished' topic
+  * Then people can decide what to do with that...
