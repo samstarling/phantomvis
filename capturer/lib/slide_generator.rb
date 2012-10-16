@@ -8,16 +8,15 @@ class SlideGenerator
     @base_url = "#{@config['settings']['server_url']}"
     @sizes = Array.new
     @templates = Array.new
+    @captures = Array.new
     load_templates
     load_sizes
+    load_captures
   end
 
   def run
-    @templates.each do |template|
-      @sizes.each do |size|
-        capture = Capture.new template, size
-        capture.perform
-      end
+    @captures.each do |capture|
+      capture.perform
     end
   end
 
@@ -29,7 +28,7 @@ class SlideGenerator
 
   def load_templates
     @config['templates'].each do |t|
-      template = Template.new t['name'], "#{@base_url}#{t['url']}"
+      template = Template.new t, @base_url
       @templates << template
     end
   end
@@ -38,6 +37,13 @@ class SlideGenerator
     @config['sizes'].each do |s|
       size = Size.new s['width'], s['height']
       @sizes << size
+    end
+  end
+  
+  def load_captures
+    @templates.each do |template|
+      capture = Capture.new template, @sizes
+      @captures << capture
     end
   end
 end

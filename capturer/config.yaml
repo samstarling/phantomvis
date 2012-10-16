@@ -11,3 +11,8 @@ templates:
   -
     name: home
     url: /
+    ttl: 30
+  -
+    name: test
+    url: /test
+    ttl: 60

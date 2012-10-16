@@ -1,8 +1,9 @@
 class Template
-  attr_reader :name, :url
+  attr_reader :name, :url, :ttl
 
-  def initialize name, url
-    @name = name
-    @url = url
+  def initialize config, base_url
+    @name = config['name']
+    @url = "#{base_url}#{config['url']}"
+    @ttl = config['ttl']
   end
 end
