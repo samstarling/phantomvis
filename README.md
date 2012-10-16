@@ -22,7 +22,7 @@ responsive design.
 
 #### server
 
-It serves slides as HTML, and is based on the popular Sinatra framework. In
+Serves slides as HTML. Based on the popular Sinatra framework. In
 this project, it's really just an example. You could use whatever you like
 to serve up slides - as the `capturer` just points at URLs.
 
