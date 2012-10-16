@@ -1,6 +1,7 @@
 # phantomvis
 
-Create beautiful RadioVIS slides that harness CSS3.
+Create beautiful RadioVIS slides by harnessing the power of HTML, CSS, and
+responsive design.
 
 ## Introduction
 
@@ -19,9 +20,19 @@ responsive design.
 
 ### Components
 
-* **server** - Serves slides as HTML
-* **capturer** - Captures slides as images
-* **uploader** - Uploads images
+#### server
+
+It serves slides as HTML, and is based on the popular Sinatra framework. In
+this project, it's really just an example. You could use whatever you like
+to serve up slides - as the `capturer` just points at URLs.
+
+#### capturer
+
+Captures slides as images of various sizes, and saves them to disk.
+
+#### uploader
+
+Uploads images in a variety of ways. (Not here yet!)
 
 ## Example Image
 
@@ -29,12 +40,14 @@ responsive design.
 
 ## Requirements
 
-    $ brew install phantomjs
+* [PhantomJS](http://phantomjs.org/)
+* Ruby dependencies are in Gemfiles
 
 ## TODO
 
 * Component to watch for 'expired' images
   * Then publish to a topic
+  * Alternatively, watch a directory?
 * Capturer needs to listen to this topic
   * Then publish to uploader topic
 * Uploader then listens to this topic
