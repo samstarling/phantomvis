@@ -16,7 +16,9 @@ class SlideGenerator
 
   def run
     @captures.each do |capture|
-      capture.perform
+      if capture.needs_capturing?
+        capture.perform
+      end
     end
   end
 

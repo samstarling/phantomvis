@@ -11,7 +11,7 @@ templates:
   -
     name: home
     url: /
-    ttl: 30
+    ttl: 5
   -
     name: test
     url: /test
