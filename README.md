@@ -18,6 +18,10 @@ ourselves. Lovely.
 And for bonus points, we can create slides in multiple sizes by using
 responsive design.
 
+It's important to note that these applications don't have anything to do with
+the actual sending of RadioVIS messages to a message broker for delivery to
+clients. This is just a framework for generating content.
+
 ### Components
 
 #### server
@@ -39,7 +43,10 @@ useful for dynamic slides – such as 'Now Playing'.
 #### uploader
 
 Uploads images to the internet, so that they can be seen by
-listeners. *This component doesn't exist in this repository yet!*
+listeners. It also tidies up after itself, by deleting the original image
+once it's been uploaded. It also has the
+
+*Note: This component doesn't exist yet, but it'll be along soon.*
 
 ## Example Image
 

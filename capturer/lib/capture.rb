@@ -7,8 +7,8 @@ class Capture
 
   def perform
     @last_generated = Time.now
-    puts "Capturing #{@template.name}"
     @sizes.each do |size|
+      puts "Capturing #{filename(size)}"
       `phantomjs capture.js #{size_s(size)} #{@template.url} #{filename(size)}`
     end
   end
@@ -28,6 +28,7 @@ class Capture
   end
 
   def filename size
-    "images/#{@template.name}-#{size.width}.png"
+    timestamp = @last_generated.to_i
+    "images/#{@template.name}-#{size.width}-#{timestamp}.png"
   end
 end
