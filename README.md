@@ -24,11 +24,14 @@ responsive design.
 
 Serves slides as HTML. Based on the popular Sinatra framework. In
 this project, it's really just an example. You could use whatever you like
-to serve up slides - as the `capturer` just points at URLs.
+to serve up slides, because the `capturer` just points at URLs.
 
 #### capturer
 
-Captures slides as images of various sizes, and saves them to disk.
+Captures the slide template you make, and uses PhantomJS to render them as 
+images in the sizes that you specify. These images are then saved to disk.
+Templates can be given a TTL, after which they are regenerated. This is
+useful for dynamic slides – such as 'Now Playing'.
 
 #### uploader
 
