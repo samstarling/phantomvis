@@ -3,7 +3,10 @@ require 'haml'
 require 'sass'
 require 'compass'
 
+require_relative 'lib/now_playing'
+
 get '/' do
+  @now = NowPlaying.new
   haml :index
 end
 

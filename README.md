@@ -26,6 +26,9 @@ Serves slides as HTML. Based on the popular Sinatra framework. In
 this project, it's really just an example. You could use whatever you like
 to serve up slides, because the `capturer` just points at URLs.
 
+The included server gives some very simple examples of how you might
+consume APIs in order to provide dynamic data in your RadioVIS slides.
+
 #### capturer
 
 Captures the slide template you make, and uses PhantomJS to render them as 
