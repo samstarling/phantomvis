@@ -35,7 +35,8 @@ useful for dynamic slides – such as 'Now Playing'.
 
 #### uploader
 
-Uploads images in a variety of ways. (Not here yet!)
+Uploads images to the internet, so that they can be seen by
+listeners. *This component doesn't exist in this repository yet!*
 
 ## Example Image
 
