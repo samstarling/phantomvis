@@ -50,7 +50,7 @@ once it's been uploaded. It also has the
 
 ## Example Image
 
-![Example image](https://raw.github.com/samstarling/phantomvis/master/examples/home-300.png)
+[Examples can be found on the wiki.](https://github.com/samstarling/phantomvis/wiki/Slide-Examples)
 
 ## Requirements
 
