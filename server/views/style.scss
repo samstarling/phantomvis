@@ -15,7 +15,6 @@ body {
   margin: 0;
   background-size: 100% auto, 50%;
   font-family: 'Helvetica Neue';
-  background: -webkit-linear-gradient(top, #7abcff 0%, #46729D 100%);
 }
 
 #slide {
@@ -27,38 +26,89 @@ body {
 }
 
 h1, h2 {
-  color: #fff;
   font-weight: normal;
-  margin: 0 0 0 0;
-  margin-right: 16px;
-  div.inner {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 45px 10px 5px 10px;
-    margin-top: -30px;
-    -webkit-transform: skewY(-1deg);
-    clear: both;
-    div {
+  margin: 0;
+}
+
+.tube {
+  background: -webkit-linear-gradient(top, #aaa 0%, #eee 100%);
+  h2 {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+  }
+  ul {
+    margin: 0;
+    padding: 15px;
+    li {
       float: left;
-    }
-    div.on-air {
-      font-size: 50%;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 0.4em 0.7em;
-      margin: 0.3em 0.7em 0 0;
-      -webkit-border-radius: 3px;
+      width: 100%;
+      margin-bottom: 0.5em;
+      list-style: none;
+      div {
+        float: left;
+        .inner {
+          padding: 0.5em 1em;
+        }        
+      }
+      div.line.central {
+        background: #E11F1F;
+      }
+      div.line.victoria {
+        background: #0199D8;
+      }
+      div.line {
+        width: 40%;
+        -webkit-border-bottom-left-radius: 0.5em;
+        -webkit-border-top-left-radius: 0.5em;
+        .inner {
+          float: right;
+        }
+      }
+      div.status {
+        width: 60%;
+        background: #fff;
+        -webkit-border-bottom-right-radius: 0.5em;
+        -webkit-border-top-right-radius: 0.5em;
+      }
+      div.status.minor {
+        color: red;
+      }
     }
   }
 }
 
-h2 div {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 5px 10px;
-  -webkit-transform: skewY(-1deg);
-  -webkit-border-bottom-right-radius: 40px;
+.home {
+  background: -webkit-linear-gradient(top, #7abcff 0%, #46729D 100%);
+  h1, h2 {
+    color: #fff;
+    margin-right: 16px;
+    div.inner {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 45px 10px 5px 10px;
+      margin-top: -30px;
+      -webkit-transform: skewY(-1deg);
+      clear: both;
+      div {
+        float: left;
+      }
+      div.on-air {
+        font-size: 50%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.4em 0.7em;
+        margin: 0.3em 0.7em 0 0;
+        -webkit-border-radius: 3px;
+      }
+    }
+  }
+  h2 div {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    -webkit-transform: skewY(-1deg);
+    -webkit-border-bottom-right-radius: 40px;
+  }
 }
 
 .logo {
-  border-top: 1px solid #777;
   background-position: 10px 10px;
   padding: 10px;
   background-repeat: no-repeat;

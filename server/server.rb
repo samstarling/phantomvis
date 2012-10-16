@@ -10,6 +10,10 @@ get '/' do
   haml :index
 end
 
+get '/tube' do
+  haml :tube
+end
+
 get '/style.css' do
   content_type 'text/css', :charset => 'utf-8'
   scss :style

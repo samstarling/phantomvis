@@ -1,5 +1,5 @@
 settings:
-  server_url: http://0.0.0.0:9292
+  server_url: http://0.0.0.0:9393
 sizes:
   -
     width: 300
@@ -13,6 +13,6 @@ templates:
     url: /
     ttl: 30
   -
-    name: test
-    url: /test
+    name: tube
+    url: /tube
     ttl: 60
