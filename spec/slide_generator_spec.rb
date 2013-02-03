@@ -33,7 +33,7 @@ describe ConfigParser do
     
     it 'should parse the slides into meaningful objects' do
       @vis = ConfigParser.parse 'spec/conf/valid.yml'
-      @vis.sizes.include?(Size.new 300, 250).should == true
+      @vis.slides.include?(Slide.new 'foo').should == true
     end
   end
 end

@@ -5,13 +5,8 @@ class ConfigParser
     raise "No sizes are defined" unless config["sizes"]
     raise "No slides are defined" unless config["slides"]
     
-    sizes = config["sizes"].map do |size|
-      parse_size size
-    end
-    
-    slides = config["slides"].map do |slide|
-      parse_slide slide
-    end
+    sizes = config["sizes"].map { |size| parse_size size }
+    slides = config["slides"].map { |slide| parse_slide slide }
     
     VisService.new sizes, slides
   end
@@ -31,7 +26,19 @@ class ConfigParser
   end
   
   def self.parse_slide slide
-    "foo"
+    Slide.new slide["title"]
+  end
+end
+
+class Slide
+  attr_accessor :title
+  
+  def initialize title
+    @title = title
+  end
+  
+  def == other
+    self.title = other.title
   end
 end
 

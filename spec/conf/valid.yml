@@ -3,6 +3,6 @@ sizes:
   - 400 x 300
   - 600 x 800
 slides:
-  - one
-  - two
-  - three
+  - foo
+  - bar
+  - baz
