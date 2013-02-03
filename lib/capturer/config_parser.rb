@@ -1,3 +1,6 @@
+require_relative 'size'
+require_relative 'slide'
+
 class ConfigParser
   def self.parse file
     config = YAML::load(File.open(file))
@@ -14,43 +17,13 @@ class ConfigParser
   private
   
   def self.parse_size size
-    raise "Size needs two components" if size.split('x').length != 2
     components = size.split('x')
+    raise "Size needs two components" if components.length != 2
     Size.new components[0], components[1]
   end
   
   def self.parse_slide slide
     Slide.new slide["title"]
-  end
-end
-
-class Slide
-  attr_accessor :title
-  
-  def initialize title
-    @title = title
-  end
-  
-  def == other
-    self.title = other.title
-  end
-end
-
-class Size
-  attr_accessor :width, :height
-  
-  def initialize width, height
-    @width = Integer(width)
-    @height = Integer(height)
-  end
-  
-  def to_s
-    "#{width} x #{height}"
-  end
-  
-  def == other
-    self.width = other.width
-    self.height = other.height
   end
 end
 
