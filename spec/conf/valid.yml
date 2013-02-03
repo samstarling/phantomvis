@@ -3,6 +3,9 @@ sizes:
   - 400 x 300
   - 600 x 800
 slides:
-  - foo
+  - 
+    title: foo
+    url: /foo/bar
+    ttl: 30
   - bar
   - baz

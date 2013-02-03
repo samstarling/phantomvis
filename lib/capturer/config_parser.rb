@@ -23,7 +23,7 @@ class ConfigParser
   end
   
   def self.parse_slide slide
-    Slide.new slide["title"]
+    Slide.new slide["title"], slide["url"], slide["ttl"]
   end
 end
 
