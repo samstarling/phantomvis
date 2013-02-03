@@ -1,6 +1,6 @@
 class ConfigParser
   def self.parse file
-    config = YAML::load(File.open("conf/#{file}"))
+    config = YAML::load(File.open(file))
     sizes = config["sizes"].map do |size|
       parse_size size
     end
@@ -10,7 +10,10 @@ class ConfigParser
   private
   
   def self.parse_size size
-    components = size.split('x').map { |num| num.strip.to_i }
+    raise "Invalid size" if size.split('x').length != 2
+    components = size.split('x').map do |num|
+      Integer num.strip
+    end
     Size.new components[0], components[1]
   end
 end
