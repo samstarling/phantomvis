@@ -9,3 +9,4 @@ while true
   generator.run
   sleep 1
 end
+
