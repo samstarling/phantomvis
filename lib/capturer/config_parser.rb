@@ -2,10 +2,16 @@ class ConfigParser
   def self.parse file
     config = YAML::load(File.open("conf/#{file}"))
     sizes = config["sizes"].map do |size|
-      parsed_size = size.split('x').map { |s| s.strip.to_i }
-      Size.new parsed_size[0], parsed_size[1]
+      parse_size size
     end
     VisService.new sizes
+  end
+  
+  private
+  
+  def self.parse_size size
+    components = size.split('x').map { |num| num.strip.to_i }
+    Size.new components[0], components[1]
   end
 end
 
@@ -21,7 +27,7 @@ class Size
     "#{width} x #{height}"
   end
   
-  def == other
+  def ==(other)
     self.width = other.width
     self.height = other.height
   end

@@ -13,5 +13,8 @@ describe ConfigParser do
     it "should parse the sizes into meaningful objects" do
       @vis.sizes.include?(Size.new 300, 250).should == true
     end
+    
+    it "should throw an exception for any invalid sizes" do
+    end
   end
 end
