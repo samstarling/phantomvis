@@ -1,2 +1,6 @@
 sizes:
   - foo x bar
+slides:
+  - one
+  - two
+  - three

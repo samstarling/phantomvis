@@ -1,2 +1,6 @@
 sizes:
   - foobar
+slides:
+  - one
+  - two
+  - three
