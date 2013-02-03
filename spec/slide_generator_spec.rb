@@ -1,5 +1,19 @@
 require 'spec_helper'
 
+describe Size do
+  it 'should convert strings to integers' do
+    size = Size.new "100", "200"
+    size.width.should == 100
+    size.height.should == 200
+  end
+  
+  it 'should trim strings' do
+    size = Size.new "100 ", "  200"
+    size.width.should == 100
+    size.height.should == 200
+  end
+end
+
 describe ConfigParser do
   describe 'parse sizes' do
     it 'should parse sizes from the configuration file' do
@@ -10,18 +24,6 @@ describe ConfigParser do
     it 'should parse the sizes into meaningful objects' do
       @vis = ConfigParser.parse 'spec/conf/valid.yml'
       @vis.sizes.include?(Size.new 300, 250).should == true
-    end
-    
-    it 'should throw an exception for any invalid sizes' do
-      file = 'spec/conf/invalid_size.yml'
-      error = 'Size needs two components'
-      expect { ConfigParser.parse file }.to raise_error(Exception, error)
-    end
-    
-    it 'should throw an exception for any non-numeric sizes' do
-      file = 'spec/conf/invalid_size_non_numeric.yml'
-      error = 'Size needs to be a number'
-      expect { ConfigParser.parse file }.to raise_error(Exception, error)
     end
   end
   

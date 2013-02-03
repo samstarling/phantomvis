@@ -15,13 +15,7 @@ class ConfigParser
   
   def self.parse_size size
     raise "Size needs two components" if size.split('x').length != 2
-    components = size.split('x').map do |num|
-      begin
-        Integer num.strip
-      rescue
-        raise "Size needs to be a number"
-      end
-    end
+    components = size.split('x')
     Size.new components[0], components[1]
   end
   
@@ -46,8 +40,8 @@ class Size
   attr_accessor :width, :height
   
   def initialize width, height
-    @width = width
-    @height = height
+    @width = Integer(width)
+    @height = Integer(height)
   end
   
   def to_s
