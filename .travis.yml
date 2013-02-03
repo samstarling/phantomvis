@@ -1,4 +1,4 @@
 language: ruby
 rvm:
   - "1.9.3"
-script: karma_file=bundle exec rspec
+script: bundle exec rspec
