@@ -1,7 +1,6 @@
 # phantomvis
 
-Create beautiful [RadioVIS][1] slides by harnessing the power of HTML, CSS, and
-responsive design.
+Create beautiful [RadioVIS][radiodns] slides by harnessing the power of HTML, CSS, and responsive design.
 
 [![Build Status](https://travis-ci.org/samstarling/phantomvis.png?branch=master)](https://travis-ci.org/samstarling/phantomvis)  
 [![Code Climate](https://codeclimate.com/github/samstarling/phantomvis.png)](https://codeclimate.com/github/samstarling/phantomvis)
@@ -13,7 +12,7 @@ Install the Ruby dependencies, using `bundler`:
     $ gem install bundler
     $ bundle install
 
-You'll also need to [install PhantomJS](http://phantomjs.org/download.html).
+You'll also need to [install PhantomJS][phantom].
 
 ## Introduction
 
@@ -51,14 +50,13 @@ once it's been uploaded. It also has the
 
 ## Example Image
 
-[Examples can be found on the wiki.](https://github.com/samstarling/phantomvis/wiki/Slide-Examples)
+[Examples can be found on the wiki.][examples]
 
 ## Requirements
 
-* [PhantomJS](http://phantomjs.org/)
-* Ruby dependencies are in Gemfiles
+* [PhantomJS][phantom]
 
-## TODO
+## Still To Do
 
 * Component to watch for 'expired' images
   * Then publish to a topic
@@ -69,4 +67,7 @@ once it's been uploaded. It also has the
   * Uploads, and publishes to 'finished' topic
   * Then people can decide what to do with that...
 
-[1]: http://radiodns.org/documentation/
+[radiodns]: http://radiodns.org/documentation/
+[examples]: https://github.com/samstarling/phantomvis/wiki/Slide-Examples
+[phantom-dl]: http://phantomjs.org/download.html
+[phantom]: http://phantomjs.org/
