@@ -1,6 +1,6 @@
 # phantomvis
 
-[![Build Status](https://travis-ci.org/samstarling/phantomvis.png?branch=master)](https://travis-ci.org/samstarling/phantomvis)
+[![Build Status](https://travis-ci.org/samstarling/phantomvis.png?branch=master)](https://travis-ci.org/samstarling/phantomvis) [![Code Climate](https://codeclimate.com/github/samstarling/phantomvis.png)](https://codeclimate.com/github/samstarling/phantomvis)
 
 Create beautiful RadioVIS slides by harnessing the power of HTML, CSS, and
 responsive design.
