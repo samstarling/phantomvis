@@ -3,7 +3,7 @@
 Create beautiful [RadioVIS][1] slides by harnessing the power of HTML, CSS, and
 responsive design.
 
-[![Build Status](https://travis-ci.org/samstarling/phantomvis.png?branch=master)](https://travis-ci.org/samstarling/phantomvis)
+[![Build Status](https://travis-ci.org/samstarling/phantomvis.png?branch=master)](https://travis-ci.org/samstarling/phantomvis)  
 [![Code Climate](https://codeclimate.com/github/samstarling/phantomvis.png)](https://codeclimate.com/github/samstarling/phantomvis)
 
 ## Installation
@@ -69,4 +69,4 @@ once it's been uploaded. It also has the
   * Uploads, and publishes to 'finished' topic
   * Then people can decide what to do with that...
 
-[1](http://radiodns.org/documentation/)
+[1]: http://radiodns.org/documentation/
