@@ -23,30 +23,6 @@ And for bonus points, we can use these same technologies to create slides in mul
 
 It's important to note that these applications don't have anything to do with the actual sending of RadioVIS messages to a message broker for delivery to clients. This is just a framework for generating content.
 
-### Components
-
-#### server
-
-Serves slides as HTML. Based on the popular Sinatra framework. In this project, it's really just an example. You could use whatever you like to serve up slides, because the `capturer` just points at URLs.
-
-The included server gives some very simple examples of how you might
-consume APIs in order to provide dynamic data in your RadioVIS slides.
-
-#### capturer
-
-Captures the slide template you make, and uses PhantomJS to render them as 
-images in the sizes that you specify. These images are then saved to disk.
-Templates can be given a TTL, after which they are regenerated. This is
-useful for dynamic slides – such as 'Now Playing'.
-
-#### uploader
-
-Uploads images to the internet, so that they can be seen by
-listeners. It also tidies up after itself, by deleting the original image
-once it's been uploaded. It also has the
-
-*Note: This component doesn't exist yet, but it'll be along soon.*
-
 ## Example Image
 
 [Examples can be found on the wiki.][examples]
@@ -57,6 +33,7 @@ once it's been uploaded. It also has the
 
 ## Still To Do
 
+* Split example server out into separate app
 * Component to watch for 'expired' images
   * Then publish to a topic
   * Alternatively, watch a directory?
