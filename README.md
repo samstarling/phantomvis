@@ -11,9 +11,11 @@ Install the Ruby dependencies, using `bundler`:
     $ gem install bundler
     $ bundle install
 
-You'll also need to [install PhantomJS][phantom].
+You'll also need to [install PhantomJS][phantom]. On a Mac with Homebrew, you can just:
 
-## Introduction
+    $ brew install phantomjs
+
+## Purpose
 
 RadioVIS is a great technology, but it's difficult to create dynamic images that look nice – and our radios deserve nice shiny images. We shouldn't have to mess around with image libraries like GD and PIL to make slides for RadioVIS. Why not use something we're a bit more used to, and that's more designer-friendly?
 
@@ -21,17 +23,13 @@ It's pretty easy to create a good looking webpage. And we can use nice things li
 
 And for bonus points, we can use these same technologies to create slides in multiple sizes through the use of responsive design.
 
-It's important to note that these applications don't have anything to do with the actual sending of RadioVIS messages to a message broker for delivery to clients. This is just a framework for generating content.
+It's important to note that these applications don't have anything to do with the actual sending of RadioVIS messages to a message broker for delivery to clients. This is just a framework for generating RadioVIS content.
 
-## Example Image
+### Example Image
 
 [Examples can be found on the wiki.][examples]
 
-## Requirements
-
-* [PhantomJS][phantom]
-
-## Still To Do
+### Still To Do
 
 * Split example server out into separate app
 * Component to watch for 'expired' images
