@@ -1,6 +1,8 @@
 require_relative 'size'
 require_relative 'slide'
 
+require 'yaml'
+
 class ConfigParser
   def self.parse file
     config = YAML::load(File.open(file))
