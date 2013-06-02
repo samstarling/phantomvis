@@ -8,6 +8,7 @@ class Slide
   end
   
   def == other
+    # TODO What does this do?
     self.title = other.title
   end
 end

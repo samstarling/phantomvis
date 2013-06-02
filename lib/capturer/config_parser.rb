@@ -3,6 +3,16 @@ require_relative 'slide'
 
 require 'yaml'
 
+class Configuration
+  attr_accessor :sizes, :slides
+  
+  def initialize sizes, slides
+    @sizes = sizes
+    @slides = slides
+  end
+end
+
+
 class ConfigParser
   def self.parse file
     config = YAML::load(File.open(file))
@@ -13,7 +23,7 @@ class ConfigParser
     sizes = config["sizes"].map { |size| parse_size size }
     slides = config["slides"].map { |slide| parse_slide slide }
     
-    VisService.new sizes, slides
+    Configuration.new sizes, slides
   end
   
   private
@@ -26,14 +36,5 @@ class ConfigParser
   
   def self.parse_slide slide
     Slide.new slide["title"], slide["url"], slide["ttl"]
-  end
-end
-
-class VisService
-  attr_accessor :sizes, :slides
-  
-  def initialize sizes, slides
-    @sizes = sizes
-    @slides = slides
   end
 end
