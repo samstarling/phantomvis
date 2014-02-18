@@ -1,16 +1,26 @@
+require 'tempfile'
+
+class Renderer
+  def render
+    Tempfile.new 'foo'
+  end
+end
+
 class VisService
   attr_reader :sizes, :slides
   
-  def initialize configuration, save_agent
+  def initialize configuration, persistence
     @sizes = configuration.sizes
     @slides = configuration.slides
-    @save_agent = save_agent
+    @persistence = persistence
+    @renderer = Renderer.new
   end
   
   def save_all
     @slides.each do |slide|
       @sizes.each do |size|
-        @save_agent.save slide, size
+        file = @renderer.render
+        @persistence.save file
       end
     end
   end
