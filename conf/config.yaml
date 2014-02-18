@@ -1,18 +1,12 @@
-settings:
-  server_url: http://0.0.0.0:9393
 sizes:
+  - 300 x 250
+  - 600 x 500
+slides:
   -
-    width: 300
-    height: 250
-  -
-    width: 600
-    height: 400
-templates:
-  -
-    name: home
-    url: /
+    title: now-playing
+    url: http://0.0.0.0:4567
     ttl: 30
   -
-    name: tube
-    url: /tube
-    ttl: 60
+    title: tube
+    url: http://0.0.0.0:4567/tube
+    ttl: 30
