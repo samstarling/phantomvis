@@ -1,8 +1,10 @@
 require 'tempfile'
 
 class Renderer
-  def render
-    Tempfile.new 'foo'
+  def render slide, size
+    path = "tmp/#{slide.title}-#{size.width}-#{size.height}.png"
+    `phantomjs #{File.dirname(__FILE__)}/capture.js #{size.width} #{size.height} #{slide.url} #{path}`
+    path
   end
 end
 
@@ -19,7 +21,7 @@ class VisService
   def save_all
     @slides.each do |slide|
       @sizes.each do |size|
-        file = @renderer.render
+        file = @renderer.render slide, size
         @persistence.save file
       end
     end
