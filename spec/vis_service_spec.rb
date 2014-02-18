@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe VisService do
-  describe 'save all' do
+  describe 'save_all' do
     it 'saves every size of every slide' do
       saver = double('persistence')
       config = ConfigParser.parse 'spec/conf/valid.yml'
