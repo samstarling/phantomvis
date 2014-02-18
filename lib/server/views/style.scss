@@ -79,47 +79,32 @@ h1, h2 {
 
 .home {
   background: -webkit-linear-gradient(top, #7abcff 0%, #46729D 100%);
+  h1 {
+    background: rgba(0,0,0,0.4);
+    padding: 10px 18px 5px 18px;
+  }
+  h2 {
+    background: rgba(0,0,0,0.2);
+    padding: 5px 18px;
+    font-weight: 200;
+  }
   h1, h2 {
     color: #fff;
-    margin-right: 16px;
-    div.inner {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 45px 10px 5px 10px;
-      margin-top: -30px;
-      -webkit-transform: skewY(-1deg);
-      clear: both;
-      div {
-        float: left;
-      }
-      div.on-air {
-        font-size: 50%;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 0.4em 0.7em;
-        margin: 0.3em 0.7em 0 0;
-        -webkit-border-radius: 3px;
-      }
-    }
-  }
-  h2 div {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 5px 10px;
-    -webkit-transform: skewY(-1deg);
-    -webkit-border-bottom-right-radius: 40px;
   }
 }
 
 .logo {
-  background-position: 10px 10px;
-  padding: 10px;
+  background-size: auto 130%;
+  background-position: 18px 50%;
+  padding: 18px;
   background-repeat: no-repeat;
-  background-image: url('http://s3.mediauk.com/logos/50/309.png');
+  background-image: url('/img/r1.jpg');
   background-color: rgba(255, 255, 255, 1);
-  height: 50px;
+  height: 15%;
   position: absolute;
-  bottom: 16px;
-  right: 16px;
+  bottom: 0px;
+  right: 0px;
   left: 0;
   z-index: 100;
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 10px;
+
 }
