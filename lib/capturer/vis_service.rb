@@ -7,14 +7,20 @@ class VisService
     @sizes = configuration.sizes
     @slides = configuration.slides
     @persistence = persistence
-    @renderer = Renderer.new
+    @renderer = Renderer
   end
   
-  def save_all
+  def generate_all
+    @slides.each { |s| s.reset }
+    generate_old
+  end
+  
+  def generate_old
     @slides.each do |slide|
       @sizes.each do |size|
         file = @renderer.render slide, size
         @persistence.save file
+        slide.last_generated = DateTime.now
       end
     end
   end

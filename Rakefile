@@ -5,5 +5,5 @@ task :generate_all do |t|
   config = ConfigParser.parse file
   persistence = DefaultPersistence.new
   service = VisService.new config, persistence
-  service.save_all
+  service.generate_all
 end
