@@ -1,5 +1,7 @@
 require_relative 'renderer'
 
+require 'date'
+
 class VisService
   attr_reader :sizes, :slides
   

@@ -1,5 +1,2 @@
-ttl
 daemonise
-message sending
 md5 image to only notify changes
-migrate to json config: https://github.com/robinjmurphy/responsive-screenshots
