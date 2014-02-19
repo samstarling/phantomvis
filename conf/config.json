@@ -1,0 +1,18 @@
+{
+  "sizes": [
+    [300, 250],
+    [600, 500]
+  ],
+  "slides": [
+    {
+      "title": "now-playing",
+      "url": "http://0.0.0.0:4567",
+      "ttl": 30
+    },
+    {
+      "title": "tube",
+      "url": "http://0.0.0.0:4567/tube",
+      "ttl": 30
+    }
+  ]
+}
