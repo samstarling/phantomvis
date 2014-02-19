@@ -1,24 +1,22 @@
 {
   "sizes": [
-    [300, 250],
-    [400, 300],
-    [600, 800]
+    [300, 250]
   ],
   "slides": [
     {
       "title": "foo",
       "url": "/foo/bar",
-      "ttl": 10
+      "ttl": 60
     },
     {
       "title": "bar",
       "url": "/foo/bar",
-      "ttl": 20
+      "ttl": 120
     },
     {
       "title": "baz",
       "url": "/foo/bar",
-      "ttl": 30
+      "ttl": 180
     }
   ]
 }

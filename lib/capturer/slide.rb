@@ -11,7 +11,17 @@ class Slide
   def reset
   end
   
+  def expired?
+    seconds_since_generated >= ttl
+  end
+  
   def == other
     self.title = other.title
+  end
+  
+  private
+  
+  def seconds_since_generated
+    ((DateTime.now - @last_generated) * 24 * 60 * 60).to_i
   end
 end
