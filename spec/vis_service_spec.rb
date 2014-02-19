@@ -4,7 +4,7 @@ describe VisService do
   describe 'save_all' do
     it 'saves every size of every slide' do
       persistence = double('persistence')
-      config = ConfigParser.parse 'spec/conf/valid.yml'
+      config = ConfigParser.parse 'spec/conf/valid.json'
       vis = VisService.new config, persistence
       persistence.should_receive(:save).exactly(9).times
       vis.save_all

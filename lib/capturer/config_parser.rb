@@ -1,7 +1,7 @@
 require_relative 'size'
 require_relative 'slide'
 
-require 'yaml'
+require 'json'
 
 class Configuration
   attr_accessor :sizes, :slides
@@ -15,7 +15,7 @@ end
 
 class ConfigParser
   def self.parse file
-    config = YAML::load(File.open(file))
+    config = JSON.load(File.open(file))
     
     raise "No sizes are defined" unless config["sizes"]
     raise "No slides are defined" unless config["slides"]
@@ -29,9 +29,8 @@ class ConfigParser
   private
   
   def self.parse_size size
-    components = size.split('x')
-    raise "Size needs two components" if components.length != 2
-    Size.new components[0], components[1]
+    raise "Size needs two components" if size.length != 2
+    Size.new size[0], size[1]
   end
   
   def self.parse_slide slide

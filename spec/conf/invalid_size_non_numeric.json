@@ -1,0 +1,22 @@
+{
+  "sizes": [
+    ["foo", "bar"]
+  ],
+  "slides": [
+    {
+      "title": "foo",
+      "url": "/foo/bar",
+      "ttl": 30
+    },
+    {
+      "title": "bar",
+      "url": "/foo/bar",
+      "ttl": 30
+    },
+    {
+      "title": "baz",
+      "url": "/foo/bar",
+      "ttl": 30
+    }
+  ]
+}
