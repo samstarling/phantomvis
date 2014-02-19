@@ -1,0 +1,62 @@
+body {
+  background: #fff;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 150%;
+}
+
+h1, h2 {
+  margin: 0;
+  font-family: 'Helvetica Neue';
+}
+
+footer {
+  background: -webkit-linear-gradient(top, rgba(60,103,155,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(84,166,229,1) 100%);
+  font-size: 22px;
+  color: #fff;
+  position: fixed;
+  padding: 13px 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.float-left {
+  float: left;
+  line-height: 1;
+}
+
+.float-right {
+  float: right;
+}
+
+.station-website {
+  font-weight: 900;
+  margin-top: 1px;
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  body { padding-top: 1px; }
+  h1 { font-size: 175%; }
+}

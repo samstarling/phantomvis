@@ -1,11 +1,14 @@
 %html
   %head
     %title
-    %script(type="text/javascript" src="/js/jquery-1.8.0-min.js")
-    %script(type="text/javascript" src="/js/jquery.fittext.js")
-    %script(type="text/javascript" src="/js/slide.js")
-    %link(rel="stylesheet" type="text/css" href="/style.css")
+    %link(rel="stylesheet" type="text/css" href="/css/base.css")
+    %link(rel="stylesheet" type="text/css" href="/css/layout.css")
+    %link(rel="stylesheet" type="text/css" href="/css/skeleton.css")
+    %link(rel="stylesheet" type="text/css" href="/css/custom.css")
   %body
-    #branding
-      %div.logo
-    = yield
+    %footer
+      %div.container
+        %div.float-left Station FM
+        %div.float-right.station-website stationfm.co.uk
+    %div.container
+      = yield
