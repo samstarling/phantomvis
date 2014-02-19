@@ -8,8 +8,3 @@ class DefaultPersistence
   end
 end
 
-file = "#{File.dirname(__FILE__)}/../../conf/config.yaml"
-config = ConfigParser.parse file
-persistence = DefaultPersistence.new
-service = VisService.new config, persistence
-service.save_all
