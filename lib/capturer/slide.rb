@@ -8,9 +8,6 @@ class Slide
     @last_generated = nil
   end
   
-  def reset
-  end
-  
   def expired?
     @last_generated == nil || seconds_since_generated >= ttl
   end
