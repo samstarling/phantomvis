@@ -11,12 +11,18 @@ class VisService
   end
   
   def generate_all
-    @slides.each { |s| s.reset }
-    generate_old
+    generate @slides
   end
   
-  def generate_old
-    @slides.each do |slide|
+  def generate_expired
+    expired = @slides.select { |s| s.expired? }
+    generate expired
+  end
+  
+  private
+  
+  def generate slides
+    slides.each do |slide|
       @sizes.each do |size|
         file = @renderer.render slide, size
         @persistence.save file

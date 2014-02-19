@@ -26,7 +26,7 @@ describe VisService do
     end
   end
   
-  describe 'generate_old' do
+  describe 'generate_expired' do
     before :each do
       @persistence = double('persistence', save: nil)
       config = ConfigParser.parse 'spec/conf/varying_ttls.json'
@@ -37,15 +37,15 @@ describe VisService do
       @time_now = Time.parse('Jan 01 2014 00:00')
       DateTime.stub!(:now).and_return(@time_now)
       @persistence.should_receive(:save).exactly(3).times
-      @vis.generate_all
+      @vis.generate_expired
     end
     
     it 'generates only the expired slides when called again' do
       stub_time 'Jan 01 2014 00:00'
-      @vis.generate_all
+      @vis.generate_expired
       stub_time 'Jan 01 2014 00:01'
       @persistence.should_receive(:save).exactly(1).times
-      @vis.generate_all
+      @vis.generate_expired
     end
   end
 end

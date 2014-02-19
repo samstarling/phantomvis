@@ -12,7 +12,7 @@ class Slide
   end
   
   def expired?
-    seconds_since_generated >= ttl
+    @last_generated == nil || seconds_since_generated >= ttl
   end
   
   def == other

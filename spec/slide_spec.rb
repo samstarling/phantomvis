@@ -14,5 +14,11 @@ describe Slide do
       stub_time '2014-01-01 09:11'
       @slide.expired?.should == true
     end
+    
+    it 'is true if there is no last generated time' do
+      @slide.last_generated = nil
+      stub_time '2014-01-01 09:01'
+      @slide.expired?.should == true
+    end
   end
 end
